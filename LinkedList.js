@@ -1,4 +1,4 @@
-import { Node } from "./Node";
+import { Node } from "./Node.js";
 export class Linkedlist{
     constructor(){
         this.head = null;
@@ -112,7 +112,7 @@ export class Linkedlist{
     toString(){
         if(!this.head) return "(head) -> null";
         let current = this.head;
-        let string = "";
+        let string = "(head) ->";
         while(current !== null){
             string += `(${current.value}) -> `;
             current = current.nextNode;
