@@ -96,4 +96,28 @@ export class Linkedlist{
         }
         return false;
     }
+
+    find(value){
+        if(!this.head) return null;
+        let currentNode = this.head;
+        let index = 0;
+        while(currentNode !== null){
+            if(currentNode.value === value) return index;
+            index ++;
+            currentNode = currentNode.nextNode;
+        }
+        return null;
+    }
+
+    toString(){
+        if(!this.head) return "(head) -> null";
+        let current = this.head;
+        let string = "";
+        while(current !== null){
+            string += `(${current.value}) -> `;
+            current = current.nextNode;
+        }
+        string += "null ";
+        return string;
+    }
 }
